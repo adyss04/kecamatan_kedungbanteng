@@ -1,0 +1,1 @@
+var json_peternakan_22 = {"type":"FeatureCollection","name":"peternakan_22","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","nama":"peternakan pak mardiono","alamat":"kebocoran"},"geometry":{"type":"Point","coordinates":[109.210075270739495,-7.396261541825555]}}]}

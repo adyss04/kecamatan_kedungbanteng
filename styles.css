@@ -1,0 +1,234 @@
+:root {
+    /* Warna disesuaikan agar mirip dengan Jakarta Satu */
+    --primary-color: #004d99; /* Biru tua untuk teks */
+    --secondary-color: #ff9900; /* Oranye untuk link aktif/aksen */
+    --background-color: #f4f4f9; /* Latar belakang body */
+    --header-bg: #e0f2ff; /* Warna biru muda untuk latar belakang header penuh */
+    --navbar-container-bg: #ffffff; /* Putih untuk container navbar */
+    --text-color: #333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
+}
+
+/* ################################################### */
+/* HEADER / NAVBAR STYLES BARU (Mirip Jakarta Satu) */
+/* ################################################### */
+
+/* Kontainer luar header (untuk latar belakang biru muda yang penuh) */
+.header-wrapper {
+    background-color: var(--header-bg);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Kontainer dalam (untuk efek kotak putih melengkung) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Lebar maksimal seperti konten */
+    margin: 0 auto;
+    background-color: var(--navbar-container-bg);
+    padding: 10px 30px;
+    border-radius: 50px; /* Membuat sudut sangat melengkung */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Revisi Logo Container untuk menampung logo dan teks */
+.logo-container {
+    padding: 0;
+    background-color: transparent;
+    display: flex; /* Menggunakan Flexbox untuk menyusun logo dan teks secara horizontal */
+    align-items: center;
+    gap: 10px; /* Jarak antara logo dan teks */
+}
+
+.logo {
+    height: 50px; 
+    width: auto;
+    display: block;
+    margin-left: 5px; /* Sedikit jarak dari tepi kotak */
+}
+
+/* Styling untuk Nama Kecamatan */
+.nama-kecamatan {
+    font-size: 1.2em; /* Ukuran teks */
+    font-weight: 700;
+    color: var(--primary-color); /* Menggunakan warna biru tua */
+    line-height: 1.2;
+    text-transform: uppercase; /* Membuat huruf kapital */
+}
+
+.nav-links a {
+    color: var(--primary-color); /* Teks default berwarna biru tua */
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-left: 15px;
+    font-weight: 700;
+    transition: color 0.3s;
+    border-radius: 0;
+}
+
+/* Styling khusus untuk link 'Tentang' */
+.nav-links a[href="#tentang"] {
+    color: var(--secondary-color); /* Warna Oranye */
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+    background-color: transparent; /* Hilangkan background hover */
+}
+
+/* ################################################### */
+/* CONTENT STYLES */
+/* ################################################### */
+
+.content-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.content-section {
+    background-color: white;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.content-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+.text-block h3 {
+    color: var(--secondary-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.text-block p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.text-block ol, .text-block ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+/* ------------------------------------------- */
+/* Styling Tambahan untuk Peta (IFRAME/QGIS2WEB) */
+/* ------------------------------------------- */
+
+/* Styling untuk penampung peta (Penting agar peta penuh) */
+.map-container {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    /* Pastikan kontainer memiliki rasio tinggi agar iframe terlihat */
+    height: 500px; 
+}
+
+/* Styling untuk Iframe */
+.map-iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Menghilangkan border default iframe */
+    display: block;
+}
+
+/* Menyembunyikan placeholder lama */
+.map-placeholder, .map-visual {
+    display: none; 
+}
+
+.placeholder-text {
+    text-align: center;
+    padding-top: 50px;
+    color: #666;
+}
+/* ------------------------------------------- */
+
+
+/* Contact Table Styles */
+.contact-table {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 0;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.contact-table td {
+    padding: 8px 0;
+}
+
+.contact-table td:first-child {
+    font-weight: 700;
+    width: 150px;
+}
+
+/*FOOTER STYLES*/
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+/* ################################################### */
+/* RESPONSIVE DESIGN */
+/* ################################################### */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 15px;
+        border-radius: 10px;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        padding: 8px 10px;
+        margin: 5px;
+        font-size: 0.9em;
+    }
+
+    /* Mengubah logo-container menjadi kolom di mobile agar logo dan teks tidak terlalu lebar */
+    .logo-container {
+        flex-direction: column; 
+        gap: 0;
+        margin-bottom: 10px;
+    }
+
+    .nama-kecamatan {
+        font-size: 1em;
+        text-align: center;
+        margin-top: 5px;
+    }
+}
