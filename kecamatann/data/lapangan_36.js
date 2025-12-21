@@ -1,0 +1,1 @@
+var json_lapangan_36 = {"type":"FeatureCollection","name":"lapangan_36","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","nama":"lapangan sepakbola kebocoran","no telepon":"0898-6618-602"},"geometry":{"type":"Point","coordinates":[109.205200258915767,-7.398556074146385]}}]}
