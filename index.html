@@ -4,103 +4,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kecamatan Kedungbanteng - Website GIS</title>
+    <title>Beranda - Kecamatan Kedungbanteng</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="logo-bms.png" type="image/png">
 </head>
 
 <body>
-
+    <!-- ================= HEADER ================= -->
     <div class="header-wrapper">
-        <header class="navbar">
-            <div class="logo-container">
+        <header class="navbar navbar-style-2">
+            <div class="logo-container logo-style-2">
                 <img src="logo-bms.png" alt="Logo Kecamatan" class="logo">
-                <span class="nama-kecamatan">KECAMATAN KEDUNGBANTENG</span>
+                <div class="nama-wrapper">
+                    <span class="nama-kecamatan">KECAMATAN KEDUNGBANTENG</span>
+                    <span class="nama-kabupaten">Kabupaten Banyumas</span>
+                </div>
             </div>
-            <nav class="nav-links">
-                <a href="#beranda">Beranda</a>
-                <a href="#peta-kebocoran">Peta Desa Kebocoran</a>
-                <a href="#peta-kedungbanteng">Peta Kedungbanteng</a>
-                <a href="#tentang">Tentang</a>
+
+            <nav class="nav-links nav-style-2">
+                <a href="index.html">Beranda</a>
+                <a href="peta-kecamatan.html">Peta Kecamatan</a>
+                <a href="peta-desa.html">Peta Desa</a>
+                <a href="tentang.html">Tentang</a>
             </nav>
         </header>
     </div>
 
-    <main class="content-container">
+    <!--BERANDA HEROO-->
+    <main class="beranda-container">
 
-        <section id="beranda" class="content-section">
+        <!-- HERO -->
+        <section class="beranda-hero">
+            <div class="hero-content">
+                <img src="kecamatan kedungbateng.jpg" alt="Desa Kedungbanteng" class="hero-image">
+
+                <div class="hero-text">
+                    <h1>Kecamatan Kedungbanteng</h1>
+                    <p>
+                        Kedungbanteng adalah sebuah kecamatan di Kabupaten Banyumas, Provinsi Jawa Tengah, Indonesia.
+                        Kecamatan ini berjarak sekitar 6 Km dari Kota Purwokerto ke arah barat laut. Pusat
+                        pemerintahannya berada di Desa Kedungbanteng. Wilayah selatan kecamatan ini masuk dalam wilayah
+                        perkotaan Purwokerto
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATISTIK -->
+        <section class="beranda-statistik">
+
+            <div class="stat-box">
+                <div class="stat-icon">
+                    <!-- IKON PETA -->
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z" stroke-width="1.8" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <h2>6.021.935 Ha</h2>
+                <span>Luas Wilayah</span>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-icon">
+                    <!-- IKON PENDUDUK -->
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                </div>
+                <h2>67.458</h2>
+                <span>Jumlah Penduduk</span>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-icon">
+                    <!-- IKON DESA -->
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M3 21h18" />
+                        <path d="M5 21V7l7-4 7 4v14" />
+                        <path d="M9 21v-6h6v6" />
+                    </svg>
+                </div>
+                <h2>14</h2>
+                <span>Total Desa</span>
+            </div>
+
+        </section>
+
+        <!-- VISI MISI -->
+        <section class="beranda-visimisi">
             <h2>Visi dan Misi Kecamatan</h2>
 
-            <div class="text-block">
-                <h3>Visi</h3>
-                <p>PENYELENGARAAN PEMERINTAHAN KECAMATAN KEDUNGBANTENG ADALAH " TERWUJUDNYA PELAYANAN YANG BERKUALITAS,
-                    MUDAH, CEPAT, TRANSPARAN DAN MENYENANGKAN",
-                    DALAM RANGKA MEMBERIKAN PELAYANAN PRIMA KEPADA MASYARAKAT.</p>
-            </div>
+            <h3>Visi</h3>
+            <p>
+                Visi penyelenggaraan pemerintahan kecamatan kedungbanteng adalah "Terwujudnya Pelayanan yang
+                Berkualitas, Mudah, Cepat Transparan dan Menyenangkan", dalam Rangka Memberikan Pelayanan Prima Kepada
+                Masyarakat.
+            </p>
 
-            <div class="text-block">
-                <h3>Misi</h3>
-                <ol>
-                    <li>MEWUJUDKAN PENINGKATAN PENGAMALAN NILAI-NILAI AGAMA SELARAS DENGAN NILAI-NILAI PANCASILA DALAM
-                        KEHIDUPAN BERMASYARAKAT DAN BERNEGARA.</li>
-                    <li>MEWUJUDKAN PENINGKATAN KINERJA PELAYANAN SEMUA ASPEK LAYANAN PUBLIK YANG EFEKTIF DAN EFISIEN.
-                    </li>
-                    <li>MEWUJUDKAN FASILITASI KEPADA MASYARAKAT YANG AKTIF, KREATIF DAN PRODUKTIF DALAM MENINGKATKAN
-                        TARAF EKONOMI MASYARAKAT.</li>
-                    <li>MEWUJUDKAN KEHIDUPAN BERBUDAYA DENGAN MENJUNJUNG NILAI-NILAI BUDAYA BANYUMASAN.</li>
-                    <li>MEWUJUDKAN PENINGKATAN KUALITAS SUMBER DAYA MANUSIA (SDM) APARATUR PEMERINTAH DAN POLA MANAJEMEN
-                        PEMERINTAHAN UMUM SERTA PEMERINTAHAN DESA YANG DIDUKUNG ETOS KERJA YANG TINGGI.</li>
-                </ol>
-            </div>
-        </section>
-
-        <section id="peta-kebocoran" class="content-section">
-            <h2>Peta Desa Kebocoran</h2>
-            <p>Peta interaktif Desa Kebocoran</p>
-
-            <div class="map-container">
-                <iframe src="./desa/index.html" frameborder="0" allowfullscreen class="map-iframe">
-                </iframe>
-            </div>
-
-        </section>
-
-        <section id="peta-kedungbanteng" class="content-section">
-            <h2>Peta Kecamatan Kedungbanteng</h2>
-            <p>Peta keseluruhan wilayah Kecamatan Kedungbanteng</p>
-
-            <div class="map-container">
-                <iframe src="./kecamatan/index.html" frameborder="0" allowfullscreen class="map-iframe">
-                </iframe>
-            </div>
-
-        </section>
-
-        <section id="tentang" class="content-section">
-            <h2>Tentang</h2>
-            <div class="text-block">
-                <p>Saya membuat website ini untuk memenuhi tugas mata kuliah Geogragraphic Information System</p>
-            </div>
-            <div class="text-block">
-                <h3>Informasi Kontak</h3>
-                <table class="contact-table">
-                    <tr>
-                        <td>Email</td>
-                        <td>: alinadyys04@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>Nomor HP/WA</td>
-                        <td>: 0895358502818</td>
-                    </tr>
-                </table>
-            </div>
+            <h3>Misi</h3>
+            <ul>
+                <li>Mewujudkan peningkatan pengamalan nilai-nilai agama selaras dengan nilai-nilai pancasila dalam
+                    kehidupan bermasyarakat dan bernegara.</li>
+                <li>Mewujudkan peningkatan kinerja pelayanan semua aspek layanan publik yang efektif dan efisien.</li>
+                <li>Mewujudkan fasilitasi kepada masyarakat yang aktif, kreatif dan produktif dalam meningkatkan taraf
+                    ekonomi masyarakat.</li>
+                <li>Mewujudkan kehidupan berbudaya dengan menjunjung nilai-nilai budaya banyumasan.</li>
+                <li>Mewujudkan peningkatan kualitas sumber daya manusia (sdm) aparatur pemerintah dan pola manajemen
+                    pemerintahan umum serta pemerintahan desa yang didukung etos kerja yang tinggi.</li>
+            </ul>
         </section>
 
     </main>
 
+    <!-- ================= CONTENT ================= -->
+    <main class="content-container">
+        <section class="content-section beranda-layout">
+
+            <div class="beranda-main">
+                <a href="berita-blt.html" class="berita-link">
+                    <article class="berita-utama">
+
+                        <img src="blt.png" alt="Penyerahan BLT Dana Desa">
+
+                        <div class="berita-body">
+                            <span class="berita-kategori">Kecamatan</span>
+
+                            <div class="berita-meta">
+                                <span>📅 12 Des 2025</span>
+                            </div>
+
+                            <h2>Penyerahan BLT Dana Desa Tahap Ke-1</h2>
+
+                            <p>
+                                Pemerintah Desa Kebocoran melaksanakan kegiatan penyerahan
+                                Bantuan Langsung Tunai (BLT) Dana Desa Tahap Ke-1 kepada
+                                masyarakat penerima manfaat.
+                            </p>
+                        </div>
+
+                    </article>
+                </a>
+            </div>
+
+            <!-- ================= SIDEBAR BERITA ================= -->
+            <aside class="beranda-sidebar">
+                <h3>Berita Terbaru</h3>
+
+                <div class="berita-list">
+                    <a href="berita-stunting.html" class="berita-item-link">
+                        <div class="berita-item">
+                            <img src="penurunan stunting.png" alt="Penurunan Stunting">
+                            <div class="berita-item-text">
+                                <span class="berita-kategori kecil">Kesehatan</span>
+                                <h4>Edukasi & Pemberian Makanan Tambahan</h4>
+                                <span class="tanggal">📅20 Mei 2025</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="berita-upacara.html" class="berita-item-link">
+                        <div class="berita-item">
+                            <img src="upacara.png" alt="Upacara Kemerdekaan">
+                            <div class="berita-item-text">
+                                <span class="berita-kategori kecil">Nasional</span>
+                                <h4>Upacara Peringatan HUT RI ke-79</h4>
+                                <span class="tanggal">📅25 Agustus 2025</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="berita-item-link">
+                        <div class="berita-item">
+                            <img src="gotong royong.jpg" alt="Kegiatan Desa">
+                            <div class="berita-item-text">
+                                <span class="berita-kategori kecil">Desa</span>
+                                <h4>Kegiatan Gotong Royong Masyarakat</h4>
+                                <span class="tanggal">📅10 Juli 2025</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </aside>
+
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
     <footer>
         <p>&copy; 2025 Kecamatan Kedungbanteng. Semua Hak Dilindungi.</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentPath = window.location.pathname.split("/").pop() || "index.html";
+            const navLinks = document.querySelectorAll(".nav-style-2 a");
+
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute("href");
+                if (linkPath === currentPath) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            });
+        });
+    </script>
+    <script>
+        const slider = document.getElementById("beritaSlider");
+        const next = document.querySelector(".next");
+        const prev = document.querySelector(".prev");
+
+        let scrollAmount = 320;
+
+        next.addEventListener("click", () => {
+            slider.scrollLeft += scrollAmount;
+        });
+
+        prev.addEventListener("click", () => {
+            slider.scrollLeft -= scrollAmount;
+        });
+
+        // AUTO SLIDE
+        setInterval(() => {
+            if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+                slider.scrollLeft = 0;
+            } else {
+                slider.scrollLeft += scrollAmount;
+            }
+        }, 4000);
+    </script>
 
 </body>
 

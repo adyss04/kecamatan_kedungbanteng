@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tentang Kecamatan Kedungbanteng</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <div class="header-wrapper">
+        <header class="navbar navbar-style-2">
+            <div class="logo-container logo-style-2">
+                <img src="logo-bms.png" alt="Logo Kecamatan" class="logo">
+
+                <div class="nama-wrapper">
+                    <span class="nama-kecamatan">KECAMATAN KEDUNGBANTENG</span>
+                    <span class="nama-kabupaten">Kabupaten Banyumas</span>
+                </div>
+            </div>
+
+            <nav class="nav-links nav-style-2">
+                <a href="index.html">Beranda</a>
+                <a href="peta-kecamatan.html">Peta Kecamatan</a>
+                <a href="peta-desa.html">Peta Desa</a>
+                <a href="tentang.html" class="active">Tentang</a>
+            </nav>
+        </header>
+    </div>
+
+    <!-- ================= CONTENT ================= -->
+    <main class="content-container tentang-page">
+
+        <!-- HERO -->
+        <section class="tentang-hero">
+            <h1>Tentang Kecamatan Kedungbanteng</h1>
+            <p>
+                Portal informasi dan pemetaan wilayah Kecamatan Kedungbanteng,
+                Kabupaten Banyumas.
+            </p>
+        </section>
+
+        <!-- GRID INFO -->
+        <section class="tentang-grid">
+
+            <div class="tentang-card">
+                <h3>📍 Profil Singkat</h3>
+                <p>
+                    Kecamatan Kedungbanteng merupakan salah satu kecamatan
+                    di Kabupaten Banyumas yang berperan dalam penyelenggaraan
+                    pemerintahan dan pelayanan publik di tingkat kecamatan.
+                </p>
+            </div>
+
+            <div class="tentang-card">
+                <h3>📜 Sejarah</h3>
+                <p>
+                    Nama Kedungbanteng berasal dari kondisi geografis wilayah
+                    yang memiliki aliran sungai (kedung) dan perbukitan.
+                    Wilayah ini berkembang seiring pertumbuhan Banyumas bagian utara.
+                </p>
+            </div>
+
+            <div class="tentang-card">
+                <h3>🏛️ Tugas Utama</h3>
+                <ul>
+                    <li>Penyelenggaraan pemerintahan kecamatan</li>
+                    <li>Koordinasi pemerintahan desa</li>
+                    <li>Pelayanan masyarakat</li>
+                    <li>Pembinaan ketertiban umum</li>
+                </ul>
+            </div>
+
+            <div class="tentang-card">
+                <h3>⚙️ Fungsi</h3>
+                <ul>
+                    <li>Koordinasi pembangunan wilayah</li>
+                    <li>Pemberdayaan masyarakat</li>
+                    <li>Pelayanan administrasi</li>
+                    <li>Pembinaan desa</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- PENGEMBANG -->
+        <section class="pengembang-wrapper">
+            <h2>Informasi Pengembang</h2>
+
+            <div class="pengembang-card">
+                <div class="avatar">👤</div>
+
+                <h3>Fatma Adys Alina</h3>
+                <span class="nim">23SA21A032</span>
+
+                <p>Sistem Informasi</p>
+                <p>Universitas Amikom Purwokerto</p>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>&copy; 2025 Kecamatan Kedungbanteng. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentPath = window.location.pathname.split("/").pop() || "index.html";
+            const navLinks = document.querySelectorAll(".nav-style-2 a");
+
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute("href");
+                if (linkPath === currentPath) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
