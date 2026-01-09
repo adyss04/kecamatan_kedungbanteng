@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Peta Desa Kebocoran</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="gambar/logo-bms.png" type="image/png">
+</head>
+
+<body class="page-peta">
+
+    <!-- ================= HEADER ================= -->
+    <div class="header-wrapper">
+        <header class="navbar navbar-style-2">
+
+            <!-- LOGO -->
+            <div class="logo-container logo-style-2">
+                <img src="gambar/logo-bms.png" alt="Logo Kecamatan" class="logo">
+                <div class="nama-wrapper">
+                    <span class="nama-kecamatan">KECAMATAN KEDUNGBANTENG</span>
+                    <span class="nama-kabupaten">Kabupaten Banyumas</span>
+                </div>
+            </div>
+
+            <!-- HAMBURGER -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- NAVIGATION -->
+            <nav class="nav-links nav-style-2" id="navMenu">
+                <a href="index.html">Beranda</a>
+                <a href="peta-kecamatan.html">Peta Kecamatan</a>
+
+                <!-- DROPDOWN PETA DESA -->
+                <div class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle active">
+                        Peta Desa
+                        <svg class="arrow-svg" viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </a>
+
+                    <div class="dropdown-menu">
+                        <a href="peta-desa.html">Desa Kebocoran</a>
+                        <a href="desa-kalikesur.html">Desa Kalikesur</a>
+                        <a href="desa-beji.html">Desa Beji</a>
+                        <a href="desa-windujaya.html">Desa Windujaya</a>
+                    </div>
+                </div>
+
+                <a href="tentang.html">Tentang</a>
+            </nav>
+        </header>
+    </div>
+
+    <!-- ================= MAP ================= -->
+    <main class="map-fullscreen-page">
+        <iframe src="./desa kalikesur/index.html" class="map-fullscreen"></iframe>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>&copy; 2025 Kecamatan Kedungbanteng</p>
+    </footer>
+
+    <!-- ================= SCRIPT ================= -->
+    <script>
+        // HAMBURGER MENU
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.getElementById("navMenu");
+        const dropdownToggle = document.querySelector(".dropdown-toggle");
+        const navDropdown = document.querySelector(".nav-dropdown");
+
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
+
+        dropdownToggle.addEventListener("click", (e) => {
+            e.preventDefault();
+            navDropdown.classList.toggle("active");
+        });
+    </script>
+
+</body>
+
+</html>

@@ -4,27 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Tentang Kecamatan Kedungbanteng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
     <!-- ================= HEADER ================= -->
-    <div class="header-wrapper">
+    <div class="header-wrapper animate-slide-down">
         <header class="navbar navbar-style-2">
-            <div class="logo-container logo-style-2">
-                <img src="logo-bms.png" alt="Logo Kecamatan" class="logo">
 
+            <!-- LOGO -->
+            <div class="logo-container logo-style-2">
+                <img src="gambar/logo-bms.png" alt="Logo Kecamatan" class="logo">
                 <div class="nama-wrapper">
                     <span class="nama-kecamatan">KECAMATAN KEDUNGBANTENG</span>
                     <span class="nama-kabupaten">Kabupaten Banyumas</span>
                 </div>
             </div>
 
-            <nav class="nav-links nav-style-2">
+            <!-- HAMBURGER -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- NAVIGATION -->
+            <nav class="nav-links nav-style-2" id="navMenu">
                 <a href="index.html">Beranda</a>
                 <a href="peta-kecamatan.html">Peta Kecamatan</a>
-                <a href="peta-desa.html">Peta Desa</a>
+
+                <!-- DROPDOWN -->
+                <div class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Peta Desa
+                        <svg class="arrow-svg" viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="peta-desa.html">Desa Kebocoran</a>
+                        <a href="desa-kalikesur.html">Desa Kalikesur</a>
+                        <a href="desa-beji.html">Desa Beji</a>
+                        <a href="desa-windujaya.html">Desa Windujaya</a>
+                    </div>
+                </div>
+
                 <a href="tentang.html" class="active">Tentang</a>
             </nav>
         </header>
@@ -34,7 +60,7 @@
     <main class="content-container tentang-page">
 
         <!-- HERO -->
-        <section class="tentang-hero">
+        <section class="tentang-hero reveal">
             <h1>Tentang Kecamatan Kedungbanteng</h1>
             <p>
                 Portal informasi dan pemetaan wilayah Kecamatan Kedungbanteng,
@@ -43,58 +69,61 @@
         </section>
 
         <!-- GRID INFO -->
-        <section class="tentang-grid">
+        <section class="info-grid-section">
+            <div class="info-grid">
 
-            <div class="tentang-card">
-                <h3>📍 Profil Singkat</h3>
-                <p>
-                    Kecamatan Kedungbanteng merupakan salah satu kecamatan
-                    di Kabupaten Banyumas yang berperan dalam penyelenggaraan
-                    pemerintahan dan pelayanan publik di tingkat kecamatan.
-                </p>
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <h3>Profil Singkat</h3>
+                    <p>
+                        Kecamatan Kedungbanteng merupakan salah satu kecamatan di Kabupaten Banyumas
+                        yang berperan dalam penyelenggaraan pemerintahan dan pelayanan publik
+                        di tingkat kecamatan.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📜</div>
+                    <h3>Sejarah</h3>
+                    <p>
+                        Nama Kedungbanteng berasal dari kondisi geografis wilayah yang memiliki
+                        aliran sungai (kedung) dan perbukitan.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🏛️</div>
+                    <h3>Tugas Utama</h3>
+                    <ul>
+                        <li>Penyelenggaraan pemerintahan kecamatan</li>
+                        <li>Koordinasi pemerintahan desa</li>
+                        <li>Pelayanan masyarakat</li>
+                        <li>Pembinaan ketertiban umum</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">⚙️</div>
+                    <h3>Fungsi</h3>
+                    <ul>
+                        <li>Koordinasi pembangunan wilayah</li>
+                        <li>Pemberdayaan masyarakat</li>
+                        <li>Pelayanan administrasi</li>
+                        <li>Pembinaan desa</li>
+                    </ul>
+                </div>
+
             </div>
-
-            <div class="tentang-card">
-                <h3>📜 Sejarah</h3>
-                <p>
-                    Nama Kedungbanteng berasal dari kondisi geografis wilayah
-                    yang memiliki aliran sungai (kedung) dan perbukitan.
-                    Wilayah ini berkembang seiring pertumbuhan Banyumas bagian utara.
-                </p>
-            </div>
-
-            <div class="tentang-card">
-                <h3>🏛️ Tugas Utama</h3>
-                <ul>
-                    <li>Penyelenggaraan pemerintahan kecamatan</li>
-                    <li>Koordinasi pemerintahan desa</li>
-                    <li>Pelayanan masyarakat</li>
-                    <li>Pembinaan ketertiban umum</li>
-                </ul>
-            </div>
-
-            <div class="tentang-card">
-                <h3>⚙️ Fungsi</h3>
-                <ul>
-                    <li>Koordinasi pembangunan wilayah</li>
-                    <li>Pemberdayaan masyarakat</li>
-                    <li>Pelayanan administrasi</li>
-                    <li>Pembinaan desa</li>
-                </ul>
-            </div>
-
         </section>
 
         <!-- PENGEMBANG -->
-        <section class="pengembang-wrapper">
+        <section class="pengembang-wrapper reveal">
             <h2>Informasi Pengembang</h2>
 
             <div class="pengembang-card">
                 <div class="avatar">👤</div>
-
                 <h3>Fatma Adys Alina</h3>
                 <span class="nim">23SA21A032</span>
-
                 <p>Sistem Informasi</p>
                 <p>Universitas Amikom Purwokerto</p>
             </div>
@@ -102,26 +131,40 @@
 
     </main>
 
-
     <!-- ================= FOOTER ================= -->
     <footer>
         <p>&copy; 2025 Kecamatan Kedungbanteng. Semua Hak Dilindungi.</p>
     </footer>
 
+    <!-- ================= SCRIPT ================= -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const currentPath = window.location.pathname.split("/").pop() || "index.html";
-            const navLinks = document.querySelectorAll(".nav-style-2 a");
+        // HAMBURGER MENU
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.getElementById("navMenu");
+        const dropdownToggle = document.querySelector(".dropdown-toggle");
+        const navDropdown = document.querySelector(".nav-dropdown");
 
-            navLinks.forEach(link => {
-                const linkPath = link.getAttribute("href");
-                if (linkPath === currentPath) {
-                    link.classList.add("active");
-                } else {
-                    link.classList.remove("active");
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
+
+        dropdownToggle.addEventListener("click", (e) => {
+            e.preventDefault();
+            navDropdown.classList.toggle("active");
+        });
+
+        // REVEAL ANIMATION
+        const reveals = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                    observer.unobserve(entry.target);
                 }
             });
-        });
+        }, { threshold: 0.15 });
+
+        reveals.forEach(el => observer.observe(el));
     </script>
 
 </body>

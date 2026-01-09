@@ -6,129 +6,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beranda - Kecamatan Kedungbanteng</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="logo-bms.png" type="image/png">
+    <link rel="icon" href="gambar/logo-bms.png" type="image/png">
 </head>
 
 <body>
+
     <!-- ================= HEADER ================= -->
-    <div class="header-wrapper">
+    <div class="header-wrapper animate-slide-down">
         <header class="navbar navbar-style-2">
             <div class="logo-container logo-style-2">
-                <img src="logo-bms.png" alt="Logo Kecamatan" class="logo">
+                <img src="gambar/logo-bms.png" alt="Logo Kecamatan" class="logo">
                 <div class="nama-wrapper">
                     <span class="nama-kecamatan">KECAMATAN KEDUNGBANTENG</span>
                     <span class="nama-kabupaten">Kabupaten Banyumas</span>
                 </div>
             </div>
+            <!-- HAMBURGER -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
             <nav class="nav-links nav-style-2">
                 <a href="index.html">Beranda</a>
                 <a href="peta-kecamatan.html">Peta Kecamatan</a>
-                <a href="peta-desa.html">Peta Desa</a>
+
+                <div class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Peta Desa
+                        <svg class="arrow-svg" viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="peta-desa.html">Desa Kebocoran</a>
+                        <a href="desa-kalikesur.html">Desa Kalikesur</a>
+                        <a href="desa-beji.html">Desa Beji</a>
+                        <a href="desa-windujaya.html">Desa Windujaya</a>
+                    </div>
+                </div>
+
                 <a href="tentang.html">Tentang</a>
             </nav>
         </header>
     </div>
 
-    <!--BERANDA HEROO-->
+    <!-- ================= BERANDA ================= -->
     <main class="beranda-container">
 
         <!-- HERO -->
-        <section class="beranda-hero">
+        <section class="beranda-hero animate-fade-up">
             <div class="hero-content">
-                <img src="kecamatan kedungbateng.jpg" alt="Desa Kedungbanteng" class="hero-image">
+                <img src="gambar/kecamatan kedungbateng.jpg" alt="Kecamatan Kedungbanteng"
+                    class="hero-image animate-zoom">
 
                 <div class="hero-text">
                     <h1>Kecamatan Kedungbanteng</h1>
                     <p>
                         Kedungbanteng adalah sebuah kecamatan di Kabupaten Banyumas, Provinsi Jawa Tengah, Indonesia.
-                        Kecamatan ini berjarak sekitar 6 Km dari Kota Purwokerto ke arah barat laut. Pusat
-                        pemerintahannya berada di Desa Kedungbanteng. Wilayah selatan kecamatan ini masuk dalam wilayah
-                        perkotaan Purwokerto
+                        Berjarak sekitar 6 km dari Kota Purwokerto ke arah barat laut dan menjadi bagian wilayah
+                        perkotaan Purwokerto.
+                        Kecamatan Kedungbanteng merupakan salah satu kecamatan di Kabupaten Banyumas yang berperan dalam
+                        penyelenggaraan pemerintahan dan pelayanan publik di tingkat kecamatan.
                     </p>
                 </div>
             </div>
         </section>
 
+
         <!-- STATISTIK -->
         <section class="beranda-statistik">
-
-            <div class="stat-box">
+            <div class="stat-box animate-delay">
                 <div class="stat-icon">
-                    <!-- IKON PETA -->
                     <svg viewBox="0 0 24 24" fill="none">
-                        <path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z" stroke-width="1.8" stroke-linecap="round"
-                            stroke-linejoin="round" />
+                        <path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z" />
                     </svg>
                 </div>
-                <h2>6.021.935 Ha</h2>
+                <h2 class="counter" data-target="6021935">0</h2>
                 <span>Luas Wilayah</span>
             </div>
 
-            <div class="stat-box">
+            <div class="stat-box animate-delay">
                 <div class="stat-icon">
-                    <!-- IKON PENDUDUK -->
                     <svg viewBox="0 0 24 24" fill="none">
                         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                         <circle cx="9" cy="7" r="4" />
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                     </svg>
                 </div>
-                <h2>67.458</h2>
+                <h2 class="counter" data-target="67458">0</h2>
                 <span>Jumlah Penduduk</span>
             </div>
 
-            <div class="stat-box">
+            <div class="stat-box animate-delay">
                 <div class="stat-icon">
-                    <!-- IKON DESA -->
                     <svg viewBox="0 0 24 24" fill="none">
                         <path d="M3 21h18" />
                         <path d="M5 21V7l7-4 7 4v14" />
-                        <path d="M9 21v-6h6v6" />
                     </svg>
                 </div>
-                <h2>14</h2>
+                <h2 class="counter" data-target="14">0</h2>
                 <span>Total Desa</span>
             </div>
-
         </section>
 
         <!-- VISI MISI -->
-        <section class="beranda-visimisi">
+        <section class="content-section visimisi-card animate-fade-up">
             <h2>Visi dan Misi Kecamatan</h2>
 
             <h3>Visi</h3>
             <p>
-                Visi penyelenggaraan pemerintahan kecamatan kedungbanteng adalah "Terwujudnya Pelayanan yang
-                Berkualitas, Mudah, Cepat Transparan dan Menyenangkan", dalam Rangka Memberikan Pelayanan Prima Kepada
-                Masyarakat.
+                Visi penyelenggaraan pemerintahan Kecamatan Kedungbanteng adalah
+                “Terwujudnya pelayanan yang berkualitas, mudah, cepat, transparan,
+                dan menyenangkan”, dalam rangka memberikan pelayanan prima kepada masyarakat.
             </p>
 
             <h3>Misi</h3>
             <ul>
-                <li>Mewujudkan peningkatan pengamalan nilai-nilai agama selaras dengan nilai-nilai pancasila dalam
-                    kehidupan bermasyarakat dan bernegara.</li>
-                <li>Mewujudkan peningkatan kinerja pelayanan semua aspek layanan publik yang efektif dan efisien.</li>
-                <li>Mewujudkan fasilitasi kepada masyarakat yang aktif, kreatif dan produktif dalam meningkatkan taraf
-                    ekonomi masyarakat.</li>
-                <li>Mewujudkan kehidupan berbudaya dengan menjunjung nilai-nilai budaya banyumasan.</li>
-                <li>Mewujudkan peningkatan kualitas sumber daya manusia (sdm) aparatur pemerintah dan pola manajemen
-                    pemerintahan umum serta pemerintahan desa yang didukung etos kerja yang tinggi.</li>
+                <li>Mewujudkan peningkatan pengamalan nilai-nilai agama selaras dengan nilai-nilai Pancasila.</li>
+                <li>Meningkatkan kinerja pelayanan publik yang efektif dan efisien.</li>
+                <li>Mendorong masyarakat yang aktif, kreatif, dan produktif secara ekonomi.</li>
+                <li>Mengembangkan kehidupan berbudaya dengan menjunjung nilai budaya Banyumasan.</li>
+                <li>Meningkatkan kualitas SDM aparatur dan tata kelola pemerintahan.</li>
             </ul>
         </section>
 
     </main>
-
     <!-- ================= CONTENT ================= -->
     <main class="content-container">
         <section class="content-section beranda-layout">
 
             <div class="beranda-main">
                 <a href="berita-blt.html" class="berita-link">
-                    <article class="berita-utama">
+                    <article class="berita-utama animate-fade-up">
 
-                        <img src="blt.png" alt="Penyerahan BLT Dana Desa">
+                        <img src="gambar/blt.png" alt="Penyerahan BLT Dana Desa">
 
                         <div class="berita-body">
                             <span class="berita-kategori">Kecamatan</span>
@@ -151,13 +163,13 @@
             </div>
 
             <!-- ================= SIDEBAR BERITA ================= -->
-            <aside class="beranda-sidebar">
+            <aside class="beranda-sidebar animate-fade-up">
                 <h3>Berita Terbaru</h3>
 
                 <div class="berita-list">
                     <a href="berita-stunting.html" class="berita-item-link">
-                        <div class="berita-item">
-                            <img src="penurunan stunting.png" alt="Penurunan Stunting">
+                        <div class="berita-item animate-delay">
+                            <img src="gambar/penurunan stunting.png" alt="Penurunan Stunting">
                             <div class="berita-item-text">
                                 <span class="berita-kategori kecil">Kesehatan</span>
                                 <h4>Edukasi & Pemberian Makanan Tambahan</h4>
@@ -168,7 +180,7 @@
 
                     <a href="berita-upacara.html" class="berita-item-link">
                         <div class="berita-item">
-                            <img src="upacara.png" alt="Upacara Kemerdekaan">
+                            <img src="gambar/upacara.png" alt="Upacara Kemerdekaan">
                             <div class="berita-item-text">
                                 <span class="berita-kategori kecil">Nasional</span>
                                 <h4>Upacara Peringatan HUT RI ke-79</h4>
@@ -179,7 +191,7 @@
 
                     <a href="#" class="berita-item-link">
                         <div class="berita-item">
-                            <img src="gotong royong.jpg" alt="Kegiatan Desa">
+                            <img src="gambar/gotong royong.jpg" alt="Kegiatan Desa">
                             <div class="berita-item-text">
                                 <span class="berita-kategori kecil">Desa</span>
                                 <h4>Kegiatan Gotong Royong Masyarakat</h4>
@@ -198,44 +210,79 @@
         <p>&copy; 2025 Kecamatan Kedungbanteng. Semua Hak Dilindungi.</p>
     </footer>
 
+    <!-- ================= SCRIPT ================= -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const currentPath = window.location.pathname.split("/").pop() || "index.html";
-            const navLinks = document.querySelectorAll(".nav-style-2 a");
+        // ACTIVE MENU
+        const currentPath = location.pathname.split("/").pop() || "index.html";
+        document.querySelectorAll(".nav-style-2 a").forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                link.classList.add("active");
+            }
+        });
 
-            navLinks.forEach(link => {
-                const linkPath = link.getAttribute("href");
-                if (linkPath === currentPath) {
-                    link.classList.add("active");
-                } else {
-                    link.classList.remove("active");
+        // SCROLL ANIMATION
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
                 }
             });
-        });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll(".animate-fade-up, .animate-delay, .animate-zoom")
+            .forEach(el => observer.observe(el));
     </script>
     <script>
-        const slider = document.getElementById("beritaSlider");
-        const next = document.querySelector(".next");
-        const prev = document.querySelector(".prev");
+        const counters = document.querySelectorAll(".counter");
 
-        let scrollAmount = 320;
+        const runCounter = (counter) => {
+            const target = +counter.getAttribute("data-target");
+            const duration = 1500; // ms
+            const startTime = performance.now();
 
-        next.addEventListener("click", () => {
-            slider.scrollLeft += scrollAmount;
+            const update = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const value = Math.floor(progress * target);
+
+                counter.innerText = value.toLocaleString("id-ID");
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            };
+
+            requestAnimationFrame(update);
+        };
+
+        const counterObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    runCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.6 });
+
+        counters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
+    </script>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.querySelector(".nav-style-2");
+        const dropdownToggle = document.querySelector(".dropdown-toggle");
+        const navDropdown = document.querySelector(".nav-dropdown");
+
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
         });
 
-        prev.addEventListener("click", () => {
-            slider.scrollLeft -= scrollAmount;
+        dropdownToggle.addEventListener("click", (e) => {
+            e.preventDefault();
+            navDropdown.classList.toggle("active");
         });
-
-        // AUTO SLIDE
-        setInterval(() => {
-            if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
-                slider.scrollLeft = 0;
-            } else {
-                slider.scrollLeft += scrollAmount;
-            }
-        }, 4000);
     </script>
 
 </body>

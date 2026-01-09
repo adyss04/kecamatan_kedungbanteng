@@ -145,23 +145,24 @@ body {
 
 /* ================= HEADER ================= */
 .header-wrapper {
-    background: transparent;
-    padding: 20px;
+    background: var(--green-bg);      /* HIJAU UTAMA */
+    padding: 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .navbar-style-2 {
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 18px 32px;
-    border-radius: 40px;
+    max-width: 100%;
+    margin: 0;
+    background-color: var(--green-soft); /* KREM HIJAU */
+    padding: 16px 40px;
+    border-radius: 0;                   /* KOTAK */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: none;
 }
 
 /* Logo */
@@ -178,46 +179,48 @@ body {
 }
 
 .nama-kecamatan {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #000;
-    letter-spacing: 0.5px;
+    color: var(--green-dark);
 }
 
 .nama-kabupaten {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.85rem;
-    color: #666;
+    color: #555;
 }
 
 /* Navigation */
+/* ================= NAV DENGAN GARIS ANIMASI ================= */
 .nav-style-2 a {
     position: relative;
-    padding: 8px 0;          /* NAPAS ATAS BAWAH */
-    margin-left: 22px;
+    padding: 10px 14px;
+    margin-left: 14px;
     text-decoration: none;
-    color: #000;
+    color: var(--green-dark);
     font-weight: 500;
 }
 
+/* GARIS ANIMASI */
 .nav-style-2 a::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -6px;            /* ⬅️ JARAK GARIS KE TEKS */
+    bottom: -6px;
     width: 0;
     height: 3px;
-    background-color: var(--green-accent);
-    border-radius: 4px;
-    transition: width 0.3s ease;
+    border-radius: 6px;
+    background: linear-gradient(
+        to right,
+        #6f7f4f,
+        #9faa8a
+    );
+    transition: width 0.35s ease;
 }
 
+/* hover & aktif */
 .nav-style-2 a:hover::after,
 .nav-style-2 a.active::after {
     width: 100%;
 }
 
+/* teks aktif */
 .nav-style-2 a.active {
     font-weight: 600;
     color: var(--green-dark);
@@ -259,6 +262,95 @@ body {
     margin-left: 25px;
     margin-bottom: 15px;
 }
+/* ================= VISI MISI CARD ================= */
+.visimisi-card {
+    background: linear-gradient(
+        to bottom right,
+        #f2efdf,
+        #f7f5ea
+    );
+    border-radius: 22px;
+    padding: 40px 45px;
+    box-shadow: 
+        0 18px 40px rgba(0,0,0,0.12),
+        inset 0 1px 0 rgba(255,255,255,0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+/* garis aksen kiri */
+.visimisi-card::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    left: 0;
+    width: 6px;
+    background: linear-gradient(
+        to bottom,
+        var(--green-accent),
+        var(--green-dark)
+    );
+    border-radius: 0 6px 6px 0;
+}
+
+/* Judul utama */
+.visimisi-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: var(--green-dark);
+}
+
+/* Subjudul */
+.visimisi-card h3 {
+    font-size: 1.2rem;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    color: var(--green-accent);
+}
+
+/* Teks visi */
+.visimisi-card p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+/* List misi */
+.visimisi-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.visimisi-card li {
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* bullet custom */
+.visimisi-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 22px;
+    height: 22px;
+    background: var(--green-accent);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* ================= MAP ================= */
 .map-container {
@@ -285,6 +377,7 @@ body {
     padding-top: 50px;
     color: #666;
 }
+
 
 /* ================= CONTACT ================= */
 .contact-table {
@@ -325,13 +418,12 @@ body {
 
 /* ================= FOOTER ================= */
 footer {
-    background-color: var(--primary-color);
-    color: white;
+    background: var(--green-dark);
+    color: #fff;
     text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
+    padding: 16px 0;
+    margin-top: 30px;
 }
-
 /* ================= BERITA LAYOUT ================= */
 .beranda-layout {
     max-width: 1200px;
@@ -439,21 +531,22 @@ footer {
 }
 
 /* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
+@media (max-width:768px){
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .beranda-statistik {
+        grid-template-columns: 1fr;
+    }
+
     .beranda-layout {
         grid-template-columns: 1fr;
     }
 
-    .berita-utama {
-        min-height: 300px;
-    }
-
-    .berita-utama-content {
-        padding: 20px;
-    }
-
-    .berita-utama h2 {
-        font-size: 1.3rem;
+    .nav-style-2 {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
@@ -656,4 +749,496 @@ footer {
     display: block;
     color: #777;
     margin-bottom: 15px;
+}
+
+/* ================= ANIMATIONS ================= */
+.animate-fade-up,
+.animate-delay,
+.animate-zoom {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all .8s ease;
+}
+
+.animate-zoom {
+    transform: scale(.95);
+}
+
+.animate-slide-down {
+    animation: slideDown .8s ease forwards;
+}
+
+.animate-delay:nth-child(1) { transition-delay: .1s; }
+.animate-delay:nth-child(2) { transition-delay: .3s; }
+.animate-delay:nth-child(3) { transition-delay: .5s; }
+
+.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== NAV FIX (GARIS TIDAK MEPET) ===== */
+.nav-style-2 a {
+    padding: 10px 6px;
+}
+
+.nav-style-2 a::after {
+    bottom: -8px;
+}
+/* ================= ANIMASI REVEAL ================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ================= FULLSCREEN MAP ================= */
+.map-fullscreen-page {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 120px); /* tinggi layar dikurangi header */
+    margin: 0;
+    padding: 0;
+}
+
+.map-fullscreen {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+.map-fullscreen-page ~ footer {
+    display: none;
+}
+/* ================= HALAMAN PETA DESA ================= */
+body.page-peta {
+    background: #ffffff; /* HILANGKAN HIJAU */
+}
+
+/* header tanpa background luar */
+body.page-peta .header-wrapper {
+    background: transparent;
+    padding-bottom: 0;
+}
+
+/* peta nempel ke header */
+body.page-peta .map-fullscreen-page {
+    height: calc(100vh - 90px); /* sesuaikan tinggi header */
+}
+/* ================= INFO CARD MODERN ================= */
+
+.info-grid-section {
+    padding: 60px 20px;
+    background: var(--green-bg);
+}
+
+.info-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+}
+
+.info-card {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 32px 28px;
+    box-shadow: 0 18px 35px rgba(0,0,0,0.08);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* aksen atas */
+.info-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(
+        to right,
+        var(--green-accent),
+        var(--green-dark)
+    );
+}
+
+/* hover naik */
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.14);
+}
+
+/* icon */
+.info-icon {
+    width: 54px;
+    height: 54px;
+    background: linear-gradient(
+        to bottom right,
+        var(--green-accent),
+        var(--green-dark)
+    );
+    color: #fff;
+    font-size: 22px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+/* judul */
+.info-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: var(--green-dark);
+}
+
+/* teks */
+.info-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #333;
+    text-align: justify;
+}
+
+/* list */
+.info-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 8px;
+}
+
+.info-card li {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.info-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background: var(--green-accent);
+    color: #fff;
+    font-size: 0.7rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .info-grid-section {
+        padding: 40px 16px;
+    }
+}
+/* ================= FIX CARD TERAKHIR KE TENGAH ================= */
+
+/* Jika grid punya 4 item dan item ke-4 turun sendiri */
+.info-grid {
+    justify-items: center;
+}
+
+/* Lebar card tetap normal */
+.info-card {
+    width: 100%;
+    max-width: 360px;
+}
+
+/* Khusus layar besar: center card terakhir */
+@media (min-width: 900px) {
+    .info-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .info-card:last-child {
+        grid-column: 2 / span 1; /* taruh di tengah */
+    }
+}
+/* ================= DROPDOWN NAVBAR ================= */
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-dropdown .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+/* SVG PANAH */
+.arrow-svg {
+    width: 16px;
+    height: 16px;
+    stroke: var(--green-accent);
+    stroke-width: 2.4;
+    fill: none;
+    transition: transform .45s cubic-bezier(.34,1.56,.64,1);
+}
+
+/* BOX DROPDOWN */
+.nav-dropdown .dropdown-menu {
+    position: absolute;
+    top: 130%;
+    left: 0;
+    min-width: 200px;
+
+    background: linear-gradient(to bottom, #f2efdf, #e7e4d3);
+    border-radius: 14px;
+    padding: 10px 0;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,.15);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: all .35s ease;
+    z-index: 999;
+}
+
+/* LINK DROPDOWN */
+.nav-dropdown .dropdown-menu a {
+    display: block;
+    padding: 10px 18px;
+    color: var(--green-dark);
+    text-decoration: none;
+    font-size: .9rem;
+}
+
+/* GARIS HOVER DROPDOWN */
+/* HOVER AKTIF */
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-dropdown:hover .arrow-svg {
+    transform: rotate(180deg);
+}
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+/* ================= DROPDOWN ITEM ================= */
+/* efek hover halus */
+.dropdown-menu a:hover {
+    color: #6b8e23;
+}
+/* MATIKAN SEMUA GARIS DROPDOWN */
+.dropdown-menu a::after {
+    display: none !important;
+}
+/* ================= NAVBAR MOBILE FIX ================= */
+@media (max-width: 768px) {
+    .navbar-style-2 {
+        flex-direction: column;
+        padding: 14px 18px;
+        gap: 10px;
+    }
+
+    .logo-style-2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nama-kecamatan {
+        font-size: 0.95rem;
+    }
+
+    .nama-kabupaten {
+        font-size: 0.8rem;
+    }
+
+    .nav-style-2 {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 8px;
+    }
+
+    .nav-style-2 a {
+        margin-left: 0;
+        font-size: 0.9rem;
+    }
+
+    .nav-dropdown .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: transparent;
+        padding: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+}
+/* ================= HERO MOBILE ================= */
+@media (max-width: 576px) {
+    .beranda-hero {
+        padding: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.4rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+    .hero-image {
+        max-height: 240px;
+        object-fit: cover;
+    }
+}
+/* ================= STAT MOBILE ================= */
+@media (max-width: 576px) {
+    .stat-box {
+        padding: 18px;
+    }
+
+    .stat-box h2 {
+        font-size: 1.4rem;
+    }
+
+    .stat-box span {
+        font-size: 0.85rem;
+    }
+}
+/* ================= BERITA MOBILE ================= */
+@media (max-width: 576px) {
+    .berita-utama img {
+        height: 200px;
+    }
+
+    .berita-body {
+        padding: 18px;
+    }
+
+    .berita-utama h2 {
+        font-size: 1.15rem;
+    }
+
+    .berita-item {
+        padding: 10px;
+    }
+
+    .berita-item img {
+        width: 70px;
+        height: 60px;
+    }
+
+    .berita-item h4 {
+        font-size: 0.85rem;
+    }
+}
+/* ================= MAP MOBILE ================= */
+@media (max-width: 576px) {
+    .map-fullscreen-page {
+        height: calc(100vh - 70px);
+    }
+
+    body.page-peta .map-fullscreen-page {
+        height: calc(100vh - 70px);
+    }
+}
+/* ================= HAMBURGER MENU ================= */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 26px;
+    height: 3px;
+    background: var(--green-dark);
+    border-radius: 4px;
+    transition: .3s;
+}
+
+/* ================= MOBILE NAV ================= */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-style-2 {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        background: var(--green-soft);
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .4s ease;
+        padding: 0;
+    }
+
+    .nav-style-2.active {
+        max-height: 500px;
+        padding: 18px 0;
+    }
+
+    .nav-style-2 a {
+        margin: 0;
+        font-size: 0.95rem;
+    }
+
+    /* dropdown mobile */
+    .nav-dropdown .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: transparent;
+        padding-left: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    /* sembunyikan dropdown awal */
+    .nav-dropdown .dropdown-menu {
+        display: none;
+    }
+
+    .nav-dropdown.active .dropdown-menu {
+        display: block;
+    }
 }

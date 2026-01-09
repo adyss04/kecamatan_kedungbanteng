@@ -1,0 +1,1 @@
+var json_pemerintahan_2 = {"type":"FeatureCollection","name":"pemerintahan_2","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","nama":"balai desa beji","alamat":null,"desa":"beji","kode pos":"53152"},"geometry":{"type":"Point","coordinates":[109.219535947074675,-7.391830904854717]}}]}
